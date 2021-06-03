@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es/VE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>ACM — Asistente de Control Médico</title>
+    <meta name="title" content="ACM — Asistente de Control Médico">
+    <meta name="description"
+        content="Con ACM podrás automatizar todo el proceso de atención en los centros de salud y mantendrás un control sobre el historial de todos los pacientes.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://diegocashe.github.io/acm/img/ACMedonlylogo.svg">
+    <meta property="og:title" content="ACM — Asistente de Control Médico">
+    <meta property="og:description"
+        content="Con ACM podrás automatizar todo el proceso de atención en los centros de salud y mantendrás un control sobre el historial de todos los pacientes.">
+    <meta property="og:image"
+        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://diegocashe.github.io/acm/img/ACMedonlylogo.svg">
+    <meta property="twitter:title" content="ACM — Asistente de Control Médico">
+    <meta property="twitter:description"
+        content="Con ACM podrás automatizar todo el proceso de atención en los centros de salud y mantendrás un control sobre el historial de todos los pacientes.">
+    <meta property="twitter:image" content="https://diegocashe.github.io/acm/img/ACMedonlylogo.svg">
+
+    <link rel="icon" type="image/svg+xml" href="/acm/img/ACMedonlylogo.svg">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/acm/css/imagehover.css-master/css/imagehover.min.css" media="all">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <link rel="stylesheet" href="/acm/css/style.css">
+
+</head>
+
+<body id="body">
+    <div class="loader-container" id="loaderContainer">
+        <div class="preloader-wrapper active" id="loader">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="wrapper"> -->
+    <div class="toggle-sidenav-trigger-container">
+        <a href="#" data-target="slide-out" class="sidenav-trigger transparent grey-text text-darken-4"><i
+                class="material-icons">menu</i></a>
+    </div>
+
+
+    <nav class="no-shadows">
+
+        <div class="valign-wrapper nav-wrapper grey lighten-4 nav-items-container ">
+            <a href="#" class="brand-logo center responsive-img nav-content nav-container-logo nav-logo">
+                <img class="nav-content nav-logo" src="/acm/img/ACMedonlylogo.svg" alt="Logo">
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" class="grey-text text-darken-4 waves-effect waves-light "><i
+                            class="material-icons right grey-text text-darken-4">logout</i>Log-out</a></li>
+                <li>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="https://picsum.photos/800/200">
+                </div>
+                <a href="#user"><img class="circle" src="https://loremflickr.com/200/200"></a>
+                <a href="#name"><span class="white-text name">{{User}}</span></a>
+                <a href="#email"><span class="white-text email">{{email}}</span></a>
+            </div>
+        </li>
+        <li><a class="waves-effect waves-indigo" href="/acm/clinichistory.html">Historia clínica</a></li>
+        <li><a class="waves-effect waves-indigo" href="#!">Asistencias previas</a></li>
+        <li><a class="waves-effect waves-indigo" href="#!">Referencias</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Mi cuenta</a></li>
+        <li><a class="waves-effect waves-indigo" href="#!">Ver referidos</a></li>
+        <li><a class="waves-effect waves-indigo" href="#!">Ayudar a un colega</a></li>
+        <li><a class="waves-effect waves-indigo" href="#!">Editar Datos</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="waves-effect waves-indigo" href="#!"><i
+                    class="material-icons right grey-text text-darken-4">logout</i>Log-out</a></li>
+
+    </ul>
+
+    <section class="grey lighten-4 no-margin">
+        <div class="col s12 center">
+            <p class="flow-text scroll load-hidden scroll-reveal-apd">
+                Historias clínicas
+            </p>
+        </div>
+        <div class="container">
+            <div class="row center valign-wrapper hide-on-small-only">
+
+                <div class="input-field col s12 m10 l11 scroll ">
+                    <input id="nh" type="text">
+                    <label for="nh">Ingrese Aquí el numero de historia clínica o cédula del paciente</label>
+                </div>
+                <div class="col s6 m2 l1 valign-wrapper">
+                    <a class="btn-floating waves-effect waves-lighthoverable modal-trigger" href="#modalnuevo"><i
+                            class="material-icons indigo">add</i></a>
+                </div>
+            </div>
+            <div class="row center show-on-small hide-on-med-and-up">
+                <div class="input-field col s12">
+                    <input id="nh" type="text">
+                    <label for="nh">Número de historia o cédula</label>
+                </div>
+                <div class="col s12 center">
+                    <a href="#modalnuevo" class="btn waves indigo hoverable modal-trigger">Nueva Historia</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="yellow no-margin">
+        <div>
+            <div class="container">
+                <div class="card grey lighten-4">
+                    <div class="card-content">
+                        <h4 class="center ">{{Nombre de Paciente}}</h4>
+                        <div class="row">
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text">Usuario: </p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text">{{user}}</p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text">Motivo de Consulta: </p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text">{{r}}</p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text">Datos Personales: </p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text"><a class="modal-trigger" href="#modaldatospersonales">ver datos
+                                        personales</a></p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text">Antecedentes: </p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text"><a class="modal-trigger" href="#modalantecedentes">Ver
+                                        antecedentes</a></p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text">Examen Físico: </p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text"><a class="modal-trigger" href="#modalexamenfisico">Ver examen
+                                        físico </a></p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text">Examenes Complementarios: </p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text"><a class="modal-trigger" href="#modalexamenescomplementarios">Ver
+                                        Examenes complementarios</a></p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text">Diagnosticos </p>
+                            </div>
+                            <div class="col s12 m6 l6">
+                                <p class="flow-text"><a class="modal-trigger" href="#modaldiagnosticos">Ver
+                                        Diagnosticos</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <div class="row">
+
+                            <div class="col s6 center">
+                                <a href="#" class="btn waves indigo">Imprimir</a>
+                            </div>
+                            <div class="col s6 center">
+                                <a href="" class="btn waves green">Actualizar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Trigger -->
+    <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modalnuevo">Modal</a> -->
+
+    <!-- Modal Structure -->
+    <div id="modalnuevo" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Nueva historia</h4>
+            <div class="row">
+                <div class="col s12">
+                    <p class="flow-text"> ¿Que presenta el paciente?</p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s3">
+
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>dato</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+
+    <div id="modaldatospersonales" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Datos Personales</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+    <div id="modalantecedentes" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Antecedentes</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+    <div id="modalexamenfisico" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Examen físico</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+
+    <div id="modalexamenescomplementarios" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Examenes complementarios.</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+    <div id="modaldiagnosticos" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Diagnósticos</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+
+    <div id="modalactualizar" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Actualizar</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+
+    <!-- </div> -->
+
+    <footer class="page-footer amber grey-text text-darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h4>Asistente de consulta medica</h4>
+                    <blockquote class="flow-text">
+                        Control y confianza
+                    </blockquote>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5>Mi cuenta</h5>
+                    <ul>
+                        <li><a class="subheader"></a></li>
+                        <li><a class="waves-effect waves-light btn-flat" href="#!">Ver referidos</a></li>
+                        <li><a class="waves-effect waves-light btn-flat" href="#!">Ayudar a un colega</a></li>
+                        <li><a class="waves-effect waves-light btn-flat" href="#!">Editar Datos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright grey-text text-darken-3">
+            <div class="container">
+                © 2021 Copyright under MIT License
+                <a class="  grey-text text-darken-3 right" href="#!">WeDach</a>
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/acm/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const $elems = document.querySelectorAll('.modal');
+            const instances = M.Modal.init($elems);
+        });
+    </script>
+</body>
+
+</html>

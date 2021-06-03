@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es/VE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>ACM — Asistente de Control Médico</title>
+    <meta name="title" content="ACM — Asistente de Control Médico">
+    <meta name="description"
+        content="Con ACM podrás automatizar todo el proceso de atención en los centros de salud y mantendrás un control sobre el historial de todos los pacientes.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://diegocashe.github.io/acm/img/ACMedonlylogo.svg">
+    <meta property="og:title" content="ACM — Asistente de Control Médico">
+    <meta property="og:description"
+        content="Con ACM podrás automatizar todo el proceso de atención en los centros de salud y mantendrás un control sobre el historial de todos los pacientes.">
+    <meta property="og:image"
+        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://diegocashe.github.io/acm/img/ACMedonlylogo.svg">
+    <meta property="twitter:title" content="ACM — Asistente de Control Médico">
+    <meta property="twitter:description"
+        content="Con ACM podrás automatizar todo el proceso de atención en los centros de salud y mantendrás un control sobre el historial de todos los pacientes.">
+    <meta property="twitter:image" content="https://diegocashe.github.io/acm/img/ACMedonlylogo.svg">
+
+    <link rel="icon" type="image/svg+xml" href="/acm/img/ACMedonlylogo.svg">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/acm/css/imagehover.css-master/css/imagehover.min.css" media="all">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <link rel="stylesheet" href="/acm/css/style.css">
+
+</head>
+
+<body id="body">
+    <div class="loader-container" id="loaderContainer">
+        <div class="preloader-wrapper active" id="loader">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row no-margin flex-center all-viewport">
+
+        <div class="col s12 h-100 flex-center">
+            <div class="container scroll-reveal-apd">
+                <form action="" method="post">
+                    <div class="card indigo z-depth-4">
+                        <div class="card-content grey-text text-lighten-4 register-card-conteiner">
+                            <div class="row valign-wrapper">
+                                <div class="col s8">
+                                    <span class="card-title">
+                                        <h3 class="no-margin">Registro:</h3>
+                                    </span>
+                                </div>
+                                <div class="col s4 center">
+                                    <div class="switch">
+                                        <label>
+                                            Paciente
+                                            <input type="checkbox">
+                                            <span class="lever"></span>
+                                            Medico
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <ul id="tabs-swipe-demo" class="tabs indigo">
+                                    <li class="tab col s3 "><a href="#test-swipe-1"
+                                            class="active grey-text text-lighten-4 ">Personal</a></li>
+                                    <li class="tab col s3"><a class="grey-text text-lighten-4"
+                                            href="#test-swipe-2">Labor</a></li>
+                                    <li class="tab col s3"><a class="grey-text text-lighten-4"
+                                            href="#test-swipe-3">Familia</a></li>
+                                </ul>
+                                <div id="test-swipe-1" class="col s12 register-data-container">
+                                    <div class="row">
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="first_name" type="text" class="validate">
+                                            <label for="first_name">Nombres</label>
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="last_name" type="text" class="validate">
+                                            <label for="last_name">Apellidos</label>
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="dni" type="text" class="validate">
+                                            <label for="dni">Cédula</label>
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="dato2" type="text" class="validate">
+                                            <label for="dato2">otro</label>
+                                        </div>
+
+                                        <div class="col s12 m6 l6 input-field">
+                                            <div class="row no-margin">
+                                                <div class="col s12 m8 l8">
+                                                    <p class="grey-text text-darken-4">Género</p>
+                                                </div>
+                                                <div class="col s12 m2 l2">
+                                                    <p>
+                                                        <label>
+                                                            <input class="with-gap" name="sex" type="radio" checked />
+                                                            <span>M</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                                <div class="col s12 m2 l2">
+                                                    <p>
+                                                        <label>
+                                                            <input class="with-gap" name="sex" type="radio" />
+                                                            <span>F</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <label for="birthdate">Feha de Nacimiento</label>
+                                            <input id="birthdate" type="text" class="datepicker">
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="dato3" type="text" class="validate">
+                                            <label for="dato3">otro2</label>
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="dato3" type="text" class="validate">
+                                            <label for="dato3">otro3</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="test-swipe-2" class="col s12 register-data-container">
+                                    <div class="row">
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="t1" type="text" class="validate">
+                                            <label for="t1">dato</label>
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="t2" type="text" class="validate">
+                                            <label for="t2">dato</label>
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="t3" type="text" class="validate">
+                                            <label for="t3">dato</label>
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="t4" type="text" class="validate">
+                                            <label for="t4">dato</label>
+                                        </div>
+
+                                        <div class="col s12 m6 l6 input-field">
+                                            <div class="row no-margin">
+                                                <div class="col s12 m8 l8">
+                                                    <p class="grey-text text-darken-4">dato</p>
+                                                </div>
+                                                <div class="col s12 m2 l2">
+                                                    <p>
+                                                        <label>
+                                                            <input class="with-gap" name="t5" type="radio" checked />
+                                                            <span>a</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                                <div class="col s12 m2 l2">
+                                                    <p>
+                                                        <label>
+                                                            <input class="with-gap" name="t5" type="radio" />
+                                                            <span>b</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <label for="dato10">dato</label>
+                                            <input id="dato10" type="text" class="validate">
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="dato12" type="text" class="validate">
+                                            <label for="dato12">otro12</label>
+                                        </div>
+                                        <div class="col s12 m6 l6 input-field">
+                                            <input id="dato12" type="text" class="validate">
+                                            <label for="dato12">otro12</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="test-swipe-3" class="col s12  register-data-container">datos sobre la familia
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <div class="row no-margin">
+                                <div class="col s6 m6 l6 center">
+                                    <a class="waves-effect waves btn red hoverable" href="/acm">Cancelar</a>
+                                </div>
+                                <div class="col s6 m6 l6 center">
+                                    <a class="waves-effect waves btn green hoverable" href="/acm">Registro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="/acm/js/script.js"></script>
+        <script src="/acm/js/singin.js"></script>
+</body>
+
+</html>

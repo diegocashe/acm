@@ -1,0 +1,49 @@
+.tabs-content {
+    max-height: 50vh;
+
+}
+
+.card {
+    border-radius: 5px;
+}
+
+#test-swipe-1,
+#test-swipe-2,
+#test-swipe-3 {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:after {
+    background-color: var(--yellow);
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+    border: 2px solid var(--yellow);
+}
+
+.datepicker-date-display {
+
+    background-color: var(--indigo);
+    color: #fff;
+}
+
+.datepicker-table td.is-selected {
+    background-color: var(--indigo);
+    color: #fff;
+}
+
+.datepicker-table td.is-today {
+    color: var(--indigo);
+}
+
+.datepicker-cancel,
+.datepicker-clear,
+.datepicker-today,
+.datepicker-done {
+    color: var(--indigo);
+}
