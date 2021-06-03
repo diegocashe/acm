@@ -9,7 +9,6 @@ const slideLeft = {
     delay: 300,
     duration: 800,
     interval: 300,
-    mobile: false,
 
 };
 
@@ -17,7 +16,6 @@ const apd = {
     delay: 500,
     duration: 500,
     interval: 300,
-    mobile: false,
 
 };
 
@@ -27,7 +25,6 @@ const slideUp = {
     delay: 300,
     duration: 800,
     interval: 300,
-    mobile: false,
 
 }
 

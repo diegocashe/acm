@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es/VE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>ACM — Asistente de Control Médico</title>
+    <meta name="title" content="ACM — Asistente de Control Médico">
+    <meta name="description"
+        content="Con ACM podrás automatizar todo el proceso de atención en los centros de salud y mantendrás un control sobre el historial de todos los pacientes.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://diegocashe.github.io/acm/img/ACMedonlylogo.svg">
+    <meta property="og:title" content="ACM — Asistente de Control Médico">
+    <meta property="og:description"
+        content="Con ACM podrás automatizar todo el proceso de atención en los centros de salud y mantendrás un control sobre el historial de todos los pacientes.">
+    <meta property="og:image"
+        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://diegocashe.github.io/acm/img/ACMedonlylogo.svg">
+    <meta property="twitter:title" content="ACM — Asistente de Control Médico">
+    <meta property="twitter:description"
+        content="Con ACM podrás automatizar todo el proceso de atención en los centros de salud y mantendrás un control sobre el historial de todos los pacientes.">
+    <meta property="twitter:image" content="https://diegocashe.github.io/acm/img/ACMedonlylogo.svg">
+
+    <link rel="icon" type="image/svg+xml" href="/acm/img/ACMedonlylogo.svg">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/acm/css/imagehover.css-master/css/imagehover.min.css" media="all">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <link rel="stylesheet" href="/acm/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+
+</head>
+
+<body id="body">
+    <div class="loader-container" id="loaderContainer">
+        <div class="preloader-wrapper active" id="loader">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="wrapper"> -->
+    <div class="toggle-sidenav-trigger-container">
+        <a href="#" data-target="slide-out" class="sidenav-trigger transparent grey-text text-darken-4"><i
+                class="material-icons">menu</i></a>
+    </div>
+
+
+    <nav class="no-shadows">
+
+        <div class="valign-wrapper nav-wrapper grey lighten-4 nav-items-container ">
+            <a href="#" class="brand-logo center responsive-img nav-content nav-container-logo nav-logo">
+                <img class="nav-content nav-logo" src="/acm/img/ACMedonlylogo.svg" alt="Logo">
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" class="grey-text text-darken-4 waves-effect waves-light "><i
+                            class="material-icons right grey-text text-darken-4">logout</i>Log-out</a></li>
+                <li>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="https://picsum.photos/800/200">
+                </div>
+                <a href="#user"><img class="circle" src="https://loremflickr.com/200/200"></a>
+                <a href="#name"><span class="white-text name">{{User}}</span></a>
+                <a href="#email"><span class="white-text email">{{email}}</span></a>
+            </div>
+        </li>
+        <li><a class="waves-effect waves-indigo" href="#!">Historial</a></li>
+        <li><a class="waves-effect waves-indigo" href="#!">Tu salud</a></li>
+        <li><a class="waves-effect waves-indigo" href="#!">Solicitar</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Mi cuenta</a></li>
+        <li><a class="waves-effect waves-indigo" href="#!">Preguntar</a></li>
+        <li><a class="waves-effect waves-indigo" href="#!">Donar</a></li>
+        <li><a class="waves-effect waves-indigo" href="#!">Editar Datos</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="waves-effect waves-indigo" href="#!"><i
+                    class="material-icons right grey-text text-darken-4">logout</i>Log-out</a></li>
+
+    </ul>
+
+    <section class="body-container grey lighten-4 no-margin">
+        <div class="row center">
+            <div class="col s12 scroll load-hidden scroll-reveal-bottom">
+                <p class="flow-text">Tu Salud</p>
+            </div>
+        </div>
+        <div class="row no-margin load-hidden scroll-reveal-bottom">
+            <div class="s12 m6 l6">
+                <canvas id="c1" width="400" height="400"></canvas>
+            </div>
+            <div class="s12 m6 l6">
+                <canvas id="c2" width="400" height="400"></canvas>
+            </div>
+            <div class="s12 m6 l6">
+                <canvas id="c3" width="400" height="400"></canvas>
+
+            </div>
+            <div class="s12 m6 l6">
+                <canvas id="c4" width="400" height="400"></canvas>
+            </div>
+            <div class="s12 m6 l6">
+                <canvas id="c5" width="400" height="400"></canvas>
+
+            </div>
+            <div class="s12 m6 l6">
+                <canvas id="c6" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </section>
+    <!-- </div> -->
+
+    <footer class="page-footer amber grey-text text-darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h4>Asistente de consulta medica</h4>
+                    <blockquote class="flow-text">
+                        Control y confianza
+                    </blockquote>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5>Mi cuenta</h5>
+                    <ul>
+                        <li><a class="subheader"></a></li>
+                        <li><a class="waves-effect waves-light btn-flat" href="#!">Haz una pregunta</a></li>
+                        <li><a class="waves-effect waves-light btn-flat" href="#!">Donar</a></li>
+                        <li><a class="waves-effect waves-light btn-flat" href="#!">Editar Datos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright grey-text text-darken-3">
+            <div class="container">
+                © 2021 Copyright under MIT License
+                <a class="  grey-text text-darken-3 right" href="#!">WeDach</a>
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/acm/js/script.js"></script>
+    <script>
+const actions = [
+  {
+    name: 'Randomize',
+    handler(chart) {
+      chart.data.datasets.forEach(dataset => {
+        dataset.data = Utils.numbers({count: chart.data.labels.length, min: -100, max: 100});
+      });
+      chart.update();
+    }
+  },
+  {
+    name: 'Add Dataset',
+    handler(chart) {
+      const data = chart.data;
+      const dsColor = Utils.namedColor(chart.data.datasets.length);
+      const newDataset = {
+        label: 'Dataset ' + (data.datasets.length + 1),
+        backgroundColor: Utils.transparentize(dsColor, 0.5),
+        borderColor: dsColor,
+        data: Utils.numbers({count: data.labels.length, min: -100, max: 100}),
+      };
+      chart.data.datasets.push(newDataset);
+      chart.update();
+    }
+  },
+  {
+    name: 'Add Data',
+    handler(chart) {
+      const data = chart.data;
+      if (data.datasets.length > 0) {
+        data.labels = Utils.months({count: data.labels.length + 1});
+
+        for (var index = 0; index < data.datasets.length; ++index) {
+          data.datasets[index].data.push(Utils.rand(-100, 100));
+        }
+
+        chart.update();
+      }
+    }
+  },
+  {
+    name: 'Remove Dataset',
+    handler(chart) {
+      chart.data.datasets.pop();
+      chart.update();
+    }
+  },
+  {
+    name: 'Remove Data',
+    handler(chart) {
+      chart.data.labels.splice(-1, 1); // remove the label first
+
+      chart.data.datasets.forEach(dataset => {
+        dataset.data.pop();
+      });
+
+      chart.update();
+    }
+  }
+];
+// </block:actions>
+
+// <block:setup:1>
+const DATA_COUNT = 7;
+const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100};
+
+const labels = Utils.months({count: 7});
+const data = {
+  labels: labels,
+  datasets: [
+    {
+      label: 'Dataset 1',
+      data: Utils.numbers(NUMBER_CFG),
+      borderColor: Utils.CHART_COLORS.red,
+      backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red, 0.5),
+    },
+    {
+      label: 'Dataset 2',
+      data: Utils.numbers(NUMBER_CFG),
+      borderColor: Utils.CHART_COLORS.blue,
+      backgroundColor: Utils.transparentize(Utils.CHART_COLORS.blue, 0.5),
+    }
+  ]
+};
+// </block:setup>
+
+// <block:config:0>
+const config = {
+  type: 'line',
+  data: data,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Chart.js Line Chart'
+      }
+    }
+  },
+};
+    </script>
+</body>
+
+</html>

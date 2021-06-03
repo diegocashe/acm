@@ -253,3 +253,9 @@ textarea.materialize-textarea:focus:not([readonly])+label {
 .relative {
     position: relative !important;
 }
+
+[type="checkbox"]:checked+span:not(.lever):before {
+
+    border-right: 2px solid var(--indigo);
+    border-bottom: 2px solid var(--indigo);
+}
